@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30.06.2022/Aufgabe2</title>
+    <script src="/aufgaben/programming-basics-comparison-operators-VuralColak/solution.js"></script>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Die Fragen und Die Lösung von Aufgabe2 am 30.06.2022</h1>
+
+    <br><br><br>
+
+    <p>
+        Grundlagen der Programmierung: Vergleichsoperatoren
+        <br><br>
+Diese Übungen sollen Sie mit den Vergleichsoperatoren vertraut machen.
+<br><br>
+Anweisungen
+<br><br>
+Arbeiten Sie in solution.js
+<br>
+Geben Sie alle Ihre Ergebnisse auf der Konsole aus
+<br>
+Deklarieren Sie zwei Variablen "Äpfel" und "Orangen". Weisen Sie apples einen Wert von 20 zu. Weisen Sie oranges einen Wert von 30 zu.
+<br><br><br>
+Prüfe, ob "Äpfel" und "Orangen" gleich sind.
+<br>
+Prüfe, ob "Äpfel" und "Orangen" nicht gleich sind.
+<br>
+Prüfe, ob Äpfel größer ist als Orangen.
+<br>
+Prüfe, ob Äpfel kleiner oder gleich Orangen ist.
+<br>
+Prüfe, ob Orangen größer ist als Äpfel.
+<br>
+Erkläre eine weitere Variable Mangos und gib ihr den Wert 5. Multipliziere mangoes mit apples und prüfe, ob das Ergebnis größer ist als mangoes addiert mit oranges.
+<br>
+Subtrahiere Mangos von Äpfeln und prüfe, ob das Ergebnis kleiner ist als Orangen dividiert durch Mangos.
+<br>
+Prüfe, ob Mangos, Äpfel und Orangen gleich sind.
+<br>
+Prüfe, ob der Rest von "Äpfeln" geteilt durch "Mangos" und der Rest von "Orangen" geteilt durch "Mangos" gleich sind.
+<br>
+Prüfe, ob Mangos addiert mit Äpfeln größer ist als Orangen minus Mangos. Wenn nicht, finde einen Operator, der das Ergebnis "wahr" liefert.
+<br>
+BONUSHERAUSFORDERUNG: Versuchen Sie, die Lesbarkeit des Skripts zu erhöhen, indem Sie vor jedem Ergebnis Frageüberschriften in die Ausgabe einfügen.
+<br><br><br><br>
+Programming Basics: Comparison Operators
+<br><br>
+These exercises are aimed at making you familiar with the comparison operators.
+<br><br>
+Instructions
+<br><br>
+work in solution.js
+<br>
+Print all your results to the console
+<br>
+Declare two variables apples and oranges. Assign a value of 20 to apples. Assign a value of 30 to oranges.
+<br>
+Check whether apples and oranges are equal.
+<br>
+Check whether apples and oranges are not equal.
+<br>
+Check whether apples is greater than oranges.
+<br>
+Check whether apples is less than or equal to oranges.
+<br>
+Check whether oranges is greater than apples.
+<br>
+Declare another variable mangoes and give it a value of 5. Multiply mangoes by apples, and check whether this result is greater than mangoes added to oranges.
+<br>
+Subtract mangoes from apples and check whether this result is less than oranges divided by mangoes.
+<br>
+Check whether mangoes, apples and oranges are equal.
+<br>
+Check whether the remainder of apples divided by mangoes and the remainder of oranges divided by mangoes are equal.
+<br>
+Check whether mangoes added to apples is greater than oranges minus mangoes. If it is not, find an operator which will give a result of true.
+<br>
+BONUS CHALLENGE: Try increasing script readability by adding question headings to your output before each result.
+    </p>
+
+
+<br><br><br><br><br>
+
+<h1 style="text-align: center;">Die Lösung</h1>
+<br><br><br>
+
+<p>
+
+    <br> const äpfel = 20;
+    <br> const oranges = 30;
+    <br> const mangoes = 5;
+    <br> const istÄpfelGleichOranges = äpfel === oranges;
+    <br> 
+    <br> 
+    <br> //Frage 1
+    <br> 
+    <br> const frage1 = äpfel === oranges;
+    <br> console.log({istÄpfelGleichOranges});
+    <br> console.log({frage1});
+    <br> 
+    <br> 
+    <br> //Frage 2
+    <br> 
+    <br> const frage2 = äpfel !== oranges;
+    <br> console.log({frage2});
+    <br> 
+    <br> //Frage 3
+    <br> 
+    <br> const frage3 = äpfel > oranges;
+    <br> console.log({frage3});
+    
+    <br> //Frage 4
+    <br> 
+    <br> const frage4 = äpfel <= oranges;
+    <br> console.log({frage4});
+    <br> 
+    <br> //Frage 5
+    <br> 
+    <br> const frage5 = oranges > äpfel;
+    <br> console.log({frage5});
+    <br> 
+    <br> //Frage 6
+    <br> 
+    <br> const äpfelMalMangoes = äpfel * mangoes;
+    <br> const mangoesPlusOranges = mangoes + oranges;
+    <br> const frage6 = äpfelMalMangoes > mangoesPlusOranges;
+    <br> console.log({frage6});
+    <br> 
+    <br> //Frage 7
+    <br> 
+    <br> const äpfelMinusMangoes = äpfel - mangoes;
+    <br> const orangesTeilenMangoes = oranges / mangoes;
+    <br> const frage7 = äpfelMinusMangoes < orangesTeilenMangoes;
+    <br> console.log({frage7});
+    <br> 
+    <br> //Frage 8
+    <br> 
+    <br> const frage8 = mangoes === äpfel && mangoes === oranges;
+    <br> console.log({frage8});
+    <br> 
+    <br> //Frage 9
+    <br> 
+    <br> const äpfelTeilMangoes = äpfel % mangoes;
+    <br> const orangesTeilMangoes = oranges % mangoes;
+    <br> const frage9 = äpfelTeilMangoes === orangesTeilMangoes;
+    <br> console.log({frage9});
+    <br> 
+    <br> 
+    <br> //Frage 10
+    <br> 
+    <br> const äpfelPlusMangoes = äpfel + mangoes;
+    <br> const orangesMinusMangoes = oranges - mangoes;
+    <br> const frage10 = äpfelPlusMangoes > orangesMinusMangoes;
+    <br> console.log({frage10});
+    <br> 
+    <br> const frage11 = äpfelPlusMangoes === orangesMinusMangoes;
+    <br> console.log({frage11});
+
+
+    <br><br><br>
+
+    <h1 style="text-align: center;">Öffnen Sie bitte Console auf Developer Tools!</h1>
+
+    <br><br><br><br><br><br><br><br>
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+</p>
+    
+</body>
+</html>
