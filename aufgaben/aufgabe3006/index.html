@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30.06.2022</title>
+    <script src="/aufgaben/aufgabe3006/aufgabe3006.js"></script>
+</head>
+<body>
+    <P>
+        Aufgabe 1:
+        <br><br>
+Du bist Senior Developer in einer kleinen Firma. Deine einzige Kollegin heißt Fantasia.
+Kurz vor ihrem Urlaub hat sie dir folgenden Code hinterlassen der jetzt dringend veröffentlicht werden muss.
+<br><br>
+/**
+* Author: Fantasia
+<br>
+* Projekt: Bankanbindung Sparkasse
+<br>
+* Subprojekt: Senden einer Überweisung
+<br>
+* Company: tranzfer
+<br>
+*/
+<br><br>
+const API_URL = "api.sparkasse.de/v3/accounts";
+<br>
+const API_key = "lwqdjOI987HHUIaihjaskdh";
+<br>
+const TRANZFER_CUSTOMER_ID = "tranzfer-009';
+<br>
+const bankname = "Sparkasse";
+<br>
+console.log"Initialisiere Verbindung...");
+<br>
+consolelog("Verbindung mit "bankname + " hergestellt");
+<br>
+let 1kunde = "Jan Müller"
+<br>
+let 2kunde = "Martina Stein";
+<br>
+let iban1 = "1234 0000 9908 9999";
+<br>
+let iban1 = "1222 0000 9908 9999";
+<br>
+letbetrag = 23..3;
+<br>
+console.log("Starte Überweisung");
+<br>
+console.log(`Von "${kunde1}" IBAN: "${iban1}");
+<br>
+console.log(`Nach "${kunde2}" IBAN: "${iban2}"`);
+<br>
+console.log(`Sende Betrag ${betrag}€`);
+<br>
+console.log("Überweisung erfolgreich");
+<br>
+/ Transaktionsdauer erfassen
+<br>
+bankname = "Sparkasse Berlin";
+<br>
+const transaktionsDauer;
+<br>
+transaktionsDauer = 100;
+<br>
+console.log("Beende Verbindung...");
+<br>
+console.log('Verbindung mit ' + bankname + " beendet");
+<br>
+console.log("Dauer der Transaktion " + transaktionsDauer + "s");
+<br>
+Korrigiere Fantasias Code (Das nennt man auch refactoring) und kommentiere in jeder Zeile welche Fehler sie gemacht hat. (Das nennt man code review)
+Wenn alle Fehler beseitigt sind kannst du Fantasia auch noch tipps für “besseren” Code geben.
+<br> 
+</P>
+
+<br><br><br>
+
+
+<h1>Lösung</h1>
+
+
+<p>
+/**
+<br>
+* Author: Fantasia
+<br>
+* Projekt: Bankanbindung Sparkasse
+<br>
+* Subprojekt: Senden einer Überweisung
+<br>
+* Company: tranzfer
+<br>
+*/
+<br><br><br>
+const API_URL = "api.sparkasse.de/v3/accounts";
+<br><br>
+//Anfrühungzeich war falsch. ich habe verändert.
+<br><br>
+const API_KEY = "lwqdjOI987HHUIaihjaskdh";
+<br>
+//Man soll "Key" Wort mit Große Buchstaben schreiben.
+<br><br>
+const TRANZFER_CUSTOMER_ID = "tranzfer-009";
+<br><br>
+//Zweite Anfrühungzeich war falsch. ich habe verwendelt. Oder Man soll erste Anfrühungzeichen verändern.
+<br><br>
+let bankName = "Sparkasse";
+<br><br>
+//Man soll N Buchstabe groß schreiben.
+<br><br>
+console.log("Initialisiere Verbindung...");
+<br><br>
+//Man soll Klammer auf machen.
+<br><br>
+console.log("Verbindung mit " + bankName + " hergestellt");
+<br><br>
+//Man soll zuerst Punkt zwischen console und log stellen. Danach soll man vor bankName + stellen. Und N Buchstabe soll man groß schreiben.
+<br><br>
+let einskunde = "Jan Müller";
+<br><br>
+//Man soll Anzahlen immer als Strings schreiben. Oder am Ende soll man schreiben. Und ; soll man stellen.
+<br><br>
+let zweikunde = "Martina Stein";
+<br><br>
+//Man soll Anzahlen immer als Strings schreiben. Oder am Ende soll man schreiben.
+<br><br>
+let iban1 = 1234-0000-9908-9999;
+<br><br>
+//Das ist ein Number. Deswegen soll man Anfrühungzeichen nicht benutzen. Leerzeichen soll man löschen oder minus soll man stellen.
+<br><br>
+let iban2 = 1222-0000-9908-9999;
+<br><br>
+//Man soll iban name verändern. Weil man gleiche name zweite mal nicht benutzen. Das ist ein Number. Deswegen soll man Anfrühungzeichen nicht benutzen. Leerzeichen soll man löschen oder minus soll man stellen.
+<br><br>
+let betrag = 23.3;
+<br><br>
+// Vor Betrag soll man Leerzeichen stellen. Und soll man zweite punkt löschen.
+<br><br>
+console.log("Starte Überweisung");
+<br><br>
+//Keine Fehler
+<br><br>
+console.log(`Von "${einskunde}" IBAN: "${iban1}"`);
+<br><br>
+// Die Art von Anführungszeichen sollte glich sein. Hier muss man am Ende (`) stellen.
+<br>
+// Falsch
+<br>
+// console.log(`Von "${kunde1}" IBAN: "${iban1}");
+<br>
+// Richtig 
+<br><br>
+console.log(`Nach "${zweikunde}" IBAN: "${iban2}"`);
+<br><br>
+//Kunde name soll man korrigieren.
+<br><br>
+console.log(`Sende Betrag "${betrag}" €`);
+<br><br>
+//${betrag} soll man drin zwischen Anfrühungzeichen stellen.
+<br><br>
+console.log("Überweisung erfolgreich");
+<br><br>
+//Keine Fehler
+<br><br>
+// Transaktionsdauer erfassen
+<br><br>
+// Extra ein / soll man stellen.
+<br><br>
+bankName = "Sparkasse Berlin";
+<br><br>
+// Obenen Const bankName soll man mit let bankName verändern.
+<br><br>
+let transaktionsDauer;
+<br>
+transaktionsDauer = 100;
+<br><br>
+//Zwei zeilen soll man zusammen schreiben. Const soll man let machen.
+<br><br>
+console.log("Beende Verbindung...");
+<br><br>
+//Keine Fehler
+<br><br>
+console.log('Verbindung mit ' + bankName + " beendet");
+<br><br>
+//bankname soll man n Buchstabe groß schreiben.
+<br><br>
+console.log("Dauer der Transaktion " + transaktionsDauer + "s");
+<br><br>
+//Keine Fehler
+</p>
+
+<br><br><br>
+
+
+<h1 style="text-align: center;">Öffnen Sie bitte Console auf Developer Tools.</h1>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
