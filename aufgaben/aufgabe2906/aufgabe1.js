@@ -1,5 +1,3 @@
-
-
 // Löse die folgenden Aufgaben mit JavaScript und gib die Lösungen auf der Konsole aus.
 // Benutze sinnvolle Variablennamen.
 // A: “Ein Olympisches Schwimmbecken enthält (bei einer Wassertiefe von 3 m) 3 750 m3 Wasser. Wenn keine Wettkämpfe stattfinden wird aus Kostengründen 5 cm weniger eingelassen. Wie viele l Wasser sind das?”
