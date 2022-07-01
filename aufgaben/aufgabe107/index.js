@@ -46,3 +46,10 @@ console.log ((atoms >= 10) && (sandGrains <= 10));
 //Frage4-f
 
 console.log (((atoms * starsInSky) < 100) || ((atoms * sandGrains) > 100));
+
+
+let count = 0;
+while (count < 10){
+    console.log ("Hallo Vural");
+    count = count + 1;
+}
