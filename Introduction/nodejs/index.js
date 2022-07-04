@@ -100,10 +100,21 @@ console.log(text.trim().length, text.trim().toUpperCase());
 console.log(text.trim().length, text.trim().toLowerCase());
 
 
-const color = "rgb(255, 127, 0)";
+const color = "rgb(255, 127, 200)";
 // => rot: 255, grün: 127, blau: 0
 
-console.log("rot: ", color.substring(4,7), "grün: ", color.substring(9,12), "blau: ", color.substring(14,15));
+console.log("rot: ", color.substring(4,7), "grün: ", color.substring(9,12), "blau: ", color.substring(14,17));
+
+console.log(`rot: ${color.substring(4,7)}, grün: ${color.substring(9,12)}, blau: ${color.substring(14,17)}`);
+
+const rot = color.substring(4,7);
+const gruen = color.substring(9,12);
+const blau = color.substring(14,17);
+
+const gruenReduziert = gruen - 100;
+
+const ergebnis = `rot: ${rot}, grün: ${gruenReduziert}, blau: ${blau}`;
+console.log(ergebnis);
 
 
 
