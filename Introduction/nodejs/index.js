@@ -118,6 +118,77 @@ console.log(ergebnis);
 
 
 
+///////String/////7
+
+const string1 = "A string primitive";
+const string2 = 'Also a string primitive';
+const string3 = `Yet another string primitive`;
+const string4 = new String("A String object");
+
+//it can be done in 4 different ways.
+
+
+
+
+const text1 = "Lorem Ipsum Dolor sit Vural amet.";
+const searchTerm = "Vural";
+
+//1. Text lesen und searchTerm suchen
+const isInText1 = text1.includes(searchTerm);
+//2. Antwort sagen
+console.log(isInText1);
+
+if (isInText1) {
+    console.log("Willkommen");
+} else {
+    console.log("bye bye");
+}
+
+
+//Wenn Vural in Text enthalten ist, gib "true" aus.
+//Wenn Vural nicht in text enthalten ist, gib "false" aus.
+
+//If (text == "Vural") console.log(true);
+//If (text.includes(searchTerm)) console.log(true);
+
+
+//aufgabe1
+
+const color1 = "rgb(20, 100, 0)";
+//Erhöhe den Rot-Kanal um 100 und gib nur den Rot-Knal aus
+
+//1. Rot extrahieren
+const rot1 = color.substring(4,6);
+console.log(typeof rot1);
+// // 1. Way; const rot1Number = parseInt(rot1);
+// // // The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
+// // 2. Way: const rot1Number = Number(rot1);
+// // 3. Way:
+const rot1Number = +rot1;
+//2. Rot um 100 erhöhen
+const hellRot = rot1Number + 100;
+//3. Rot ausgeben
+console.log(hellRot);
+
+// NaN => Not a Number.
+
+// Doing Hexadecimal;
+const testBlau = 205;
+console.log(testBlau.toString());
+console.log(testBlau.toString(16));
+console.log(testBlau.toString(2));
+console.log(testBlau.toString(5));
+console.log(testBlau.toString(10));
+
+const testGruen = 0xDF;
+console.log(testGruen);
+
+const testGruen1 = "0xDF";
+console.log(testGruen1);
+
+
+
+
 console.timeEnd("debug");
 
 
