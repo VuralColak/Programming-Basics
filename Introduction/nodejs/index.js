@@ -77,4 +77,38 @@ if (h === true) {
     console.log("tschüss!h2");
 }
 
+
+const text = " Lorem Ipsum Dolor sit amet. ";
+
+console.log(text);
+
+console.log(text.toLowerCase());
+console.log(text.toUpperCase());
+
+console.log(text.length);
+
+console.log(parseInt(text));
+
+console.log(text.substring(1, 12));
+
+console.log(text.substring(13));
+
+console.log(text.trim(text));
+console.log(text.trim().length);
+
+console.log(text.trim().length, text.trim().toUpperCase());
+console.log(text.trim().length, text.trim().toLowerCase());
+
+
+const color = "rgb(255, 127, 0)";
+// => rot: 255, grün: 127, blau: 0
+
+console.log("rot: ", color.substring(4,7), "grün: ", color.substring(9,12), "blau: ", color.substring(14,15));
+
+
+
 console.timeEnd("debug");
+
+
+
+
