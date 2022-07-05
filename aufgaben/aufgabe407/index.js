@@ -132,13 +132,14 @@ console.log({aufgabe3d});
 //Aufgabe3E // 5. rgb(165, 21, 50) => Rot und Blau auf ein Viertel reduzieren und in HEX ausgeben
 
 const rot3e1 = 165;
-const rot3e = rot3e1 - (rot3e1 / 4);
+const rot3e = parseInt(rot3e1 - (rot3e1 / 4));
 const gruen3e = 21;
 const blau3e1 = 50;
-const blau3e = blau3e1 - (blau3e1 / 4);
+const blau3e = parseInt(blau3e1 - (blau3e1 / 4));
 
 const aufgabe3e = "#" + (`${rot3e.toString(16)}${gruen3e.toString(16)}${blau3e.toString(16)}`);
 console.log({aufgabe3e});
+
 
 
 
