@@ -11,7 +11,7 @@ const x = Math.round((Math.random() * 100) + 1);
 if (x <= 50){
     console.log("Ja!");
 } else {
-    console.log("Nein!");
+    console.log("Nein! :((");
 };
 
 //////////////////////////////////
