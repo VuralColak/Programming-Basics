@@ -141,8 +141,23 @@ const aufgabe3e = "#" + (`${rot3e.toString(16)}${gruen3e.toString(16)}${blau3e.t
 console.log({aufgabe3e});
 
 
+////////////////////////////
+
+// The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start (left) of the current string.
+
+// Convert your value from int to String just like this int.toString().padStart(n, '0');
+
+// The padStart() method pads a string with another string:
+
+// It is a String function. Not a number function.
+
+let m = '57';
+m = m.padStart(6, '7');
+console.log({m});
+
+let n = '5A';
+n = n.padEnd(6, '7');
+console.log({n});
 
 
-
-
-
+//////////////////////////////////////
