@@ -186,6 +186,31 @@ console.log(testGruen);
 const testGruen1 = "0xDF";
 console.log(testGruen1);
 
+/////////////////////////////
+
+console.log("----------------------------");
+
+console.log(1 / 3);
+console.log(2 / 3);
+console.log(0.1 + 0.2);
+console.log(0.2 + 0.4);
+console.log(0.2 + 0.7);
+console.log(0.2 + 0.7 === 0.9);
+console.log(((0.2 * 100) + (0.7 * 100)) / 100);
+console.log(0.2 + 0.5);
+
+console.log("----------------------------");
+
+
+const no1 = "123abcd";
+const no2 = "abcd 123";
+console.log(parseInt(no1));
+console.log(parseInt(no2));
+
+
+
+////////////////////////////
+
 
 
 
