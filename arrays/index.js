@@ -50,3 +50,20 @@ console.log(telefonbuch1);
 
 telefonbuch1.shift(); //Shift löscht das erste element im Array.
 console.log(telefonbuch1);
+
+
+///////////////////////////////////////////////////////
+console.log("--------------------------------------------------------------");
+
+const sayi1 = [2, 5, 3, 11, 17, 7, 1, 19].indexOf(17);
+console.log({sayi1});
+
+const sayi3 = [2, 5, 3, 11, 17, 7, 1, 19];
+
+const sayi2 = [5, 7, 3, 12, 16, 9, 1, 21];
+sayi2.reverse();
+console.log({sayi2});
+
+
+const langerAnzahl = sayi2.concat(sayi3);
+console.log({langerAnzahl});
