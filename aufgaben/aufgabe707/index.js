@@ -11,7 +11,7 @@
 
 // Password das der Nutzer eingegeben hat
 // Zum Testen verändern
-let password = "test";
+let password = "dci!123";
 // State Variablen
 let isPasswordSafe = true;
 let errorMessages = [];
