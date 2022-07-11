@@ -41,3 +41,7 @@
     altersCheck1 ? (altersCheck2 ? `beide dürfen` : `zu jung`) : `zu jung`
  );
 
+
+ 10 > 1
+    ? (console.log("Ist größer"), console.log("10 ist eine coole Zahl"))
+    : console.log("Ist kleiner");
