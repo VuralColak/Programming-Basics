@@ -29,3 +29,15 @@
  console.log(
      istJonasZwischen16Und21 ? "Ja er ist dazwischen" : "Nein ist er nicht"
  );
+
+
+
+ const alterDevin = 15;
+ const alterMia = 17;
+ altersCheck1 = alterDevin > 16;
+ altersCheck2 = alterMia > 16;
+
+ console.log(
+    altersCheck1 ? (altersCheck2 ? `beide dürfen` : `zu jung`) : `zu jung`
+ );
+
