@@ -39,3 +39,18 @@ console.log(
 
 
 
+  ///////////////////////
+
+
+  let amounts = [4, 1, 2, 1, 3];
+  let summeAmounts = 0;
+  let list = 0;
+  for (let i = 0; i < amounts.length; i++) {
+    console.log(`${productNames[i]} wurde ${amounts[i]} mal verkauft`);
+  }
+  
+  for (let i = 0; i < amounts.length; i++) {
+    summeAmounts += cost[i] * amounts[i];
+  }
+  
+  console.log(`Insgesamt haben wir ${summeAmounts} bezahlt `);
