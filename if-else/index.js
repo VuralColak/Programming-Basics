@@ -1,3 +1,25 @@
+/**
+ * if else
+ *
+ * Was ist das?
+ * Es ist ein Conditional. Auf gut Deutsch eine Weiche mit der man sein Programm auf verschiedene Wege lenken kann.
+ * Wenn ein if else wie eine Weiche ist. Dann ist ein Boolean der Weichensteller.
+ *
+ * Wozu brauch man es?
+ * Man kann abhängig von einer "Condition" Code ausführen
+ *
+ * Stichwort Booleans
+ *
+ * Wie funktioniert es?
+ * Ist die Bedingung zwischen den runden Klammern wahr wird der Code zwischen den geschweiften Klammern ausgeführt
+ *
+ * if(Bedingung){
+ *  Code
+ * }
+ */
+
+
+
 // if else
 
 const istHeuteDonnerstag = false;
@@ -7,6 +29,19 @@ if (istHeuteDonnerstag) {
 } else {
     console.log("Es ist NICHT Donnerstag");
 }
+
+/**
+ * else
+ *
+ * Der else Block wird ausgeführt wenn die Bedingung zwichen den Runden klammern falsch ist
+ */
+
+
+/**
+ * if else if ...
+ *
+ * Man kann das normale if else auch durch weitere if´s und else erweitern
+ */
 
 
 
@@ -151,7 +186,50 @@ console.log(showUser);
 const darfUserBildSehen = false;
 const bild = "Das Bild";
 const output = darfUserBildSehen && bild;
-console.log(output);
+console.log({output});
+
+
+
+// ------------------------------------
+
+console.log();
+console.log("---------------------------");
+console.log();
+
+
+/*
+ * Um genau zu sein wird Code in einem if statement ausgeführt
+ * falls die Bedingung zwischen den Klammern "truthy" is
+ */
+
+// Beispiele für truthy Werte
+
+if (true) console.log(`true ist truthy`); // was auch sonst ;)
+if (1) console.log(`1 ist truthy`);
+if (42) console.log(`42 ist truthy`);
+if ("hallo du da") console.log(`strings mit Inhalt sind truthy`);
+if ({}) console.log("Objekte sind truthy");
+if ([]) console.log("Arrays sind truthy");
+
+// Beispiele für falsy Werte
+
+if (false) console.log(`Kommt nie!`);
+else console.log(`false ist falsy`); // was auch sonst ;)
+
+if (0) console.log(`Kommt nie!`);
+else console.log(`0 ist falsy`);
+
+if (null) console.log(`Kommt nie!`);
+else console.log(`null ist falsy`);
+
+if (undefined) console.log(`Kommt nie!`);
+else console.log(`undefined ist falsy`);
+
+if ("") console.log(`Kommt nie!`);
+else console.log(`Ein leerer String ist falsy`);
+
+if (NaN) console.log(`Kommt nie!`);
+else console.log(`NaN ist falsy`);
 
 
 
