@@ -20,6 +20,12 @@ console.log("Math.random", Math.random());
 console.log("Math.max", Math.max(19, 20, 21, 18, 24));
 console.log("Math.min", Math.min(19, 20, 21, 18, 24));
 
+const array1 = [1, 3, 2];
+
+console.log(Math.max(...array1));
+// expected output: 3
+
+
 console.log("-------")
 
 // Ergebnisse sind nicht immer so, wie wir sie erwarten würden.
@@ -38,3 +44,6 @@ console.log(0.2 + 0.1 === 0.3);
 // mit einem Vielfachen von 10 multipliziert werden
 // und das Ergebnis dadurch wieder dividiert wird.
 console.log((0.2 * 10 + 0.1 * 10) / 10);
+
+
+
