@@ -29,3 +29,10 @@ const blueHexPadded = blueHex.padStart(2, "0");
 // 4. Ausgabe erstellen
 const result = `#${redHexPadded}${greenHexPadded}${blueHexPadded}`;
 console.log(result);
+
+
+
+
+let text = "5";
+const newText = text.padStart(4,"0");
+console.log(newText);
