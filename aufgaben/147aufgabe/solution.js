@@ -91,5 +91,3 @@ console.log("-----------Frage-5------------");
 console.log("               ");
 
 // Frage-5 : Sind deine Funktionen Pure Functions oder haben sie Side Effects? Begründe/Beweise deine Antwort.
-
-

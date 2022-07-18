@@ -152,3 +152,85 @@ console.log({fruitsSplice});
 console.log({fruitsSplice2});
 console.log({fruitsSplice3});
 
+
+/////////////////////////////////////////////////
+
+console.log(" ");
+console.log("--------- Replace Method ------------");
+console.log(" ");
+
+
+// The replace() method searches a string for a value or a regular expression.
+
+// The replace() method returns a new string with the value(s) replaced.
+
+// The replace() method does not change the original string.
+
+// Syntax
+// string.replace(searchValue, newValue)
+
+// searchValue	Required.
+// The value, or regular expression, to search for.
+// 
+// newValue	Required.
+// The new value (to replace with).
+
+
+
+const textReplace1 = "Visit Microsoft!";
+let newTextReplace1 = textReplace1.replace("Microsoft", "W3Schools");
+const textReplace2 = "Mr Blue has a blue house and a blue car.";
+let newTextReplace2 = textReplace2.replace(/blue/g, "red"); // burada g bütün blue'lerin degismesini saglar.
+let newTextReplace3 = textReplace2.replace(/blue/gi, "red"); // A global, case-insensitive replacement (Global, büyük/küçük harfe
+// duyarsız bir değiştirme:)
+let newTextReplace4 = textReplace2.replace(/blue|house|car/gi, function (x) {
+    return x.toUpperCase();
+  }); // A function to return the replacement text (Değiştirilen metni return etme fonksiyonu)
+
+
+
+console.log({newTextReplace1});
+console.log({newTextReplace2});
+console.log({newTextReplace3});
+console.log({newTextReplace4});
+
+
+const textReplace3 = "es2021 first sample code first";
+console.log(textReplace3.replaceAll(/first/g, ''));
+
+// Regular expressions are unsafe to use because they contain escape characters that need for certain functions, and these are not readable.
+
+// the latest version (ES2021) of javascript includes a built-in replaceAll method to prevent such issues,
+
+console.log(textReplace3.replace(/first/g, ''));
+
+
+let textReplace4 = 'JS will, JS will, JS will rock you.';
+let newTextReplace5 = textReplace4.replaceAll('JS','JavaScript');
+
+console.log({newTextReplace5});
+
+
+
+let textReplace5 = 'JS will, Js will, js will rock you.';
+
+let patternReplace = /js/gi;
+
+let newTextReplace6 = textReplace5.replaceAll(patternReplace, function(match, offset, textReplace5) {
+    if(match === 'JS') return 'JavaScript';
+    if(match === 'Js') return 'Javascript';
+    if(match === 'js') return 'javascript';
+    return '';
+});
+
+console.log({newTextReplace6});
+
+
+
+
+
+/////////////////////////////////////////////////
+
+console.log(" ");
+console.log("--------- Replace Method ------------");
+console.log(" ");
