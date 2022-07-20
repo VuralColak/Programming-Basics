@@ -112,7 +112,7 @@ console.log(allCharacters.length);
 function createPassword(myPass){
     const myPassword = [];
     for(let i=0; i < 8; i++){
-        if()
+        
         myPassword.push(myPass[parseInt(Math.random()*(myPass.length))]);
     };
     return myPassword.join("");
