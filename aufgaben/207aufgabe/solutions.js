@@ -111,10 +111,11 @@ console.log(allCharacters.length);
 
 function createPassword(myPass){
     const myPassword = [];
-    for(let i=0; i < 8; i++){
+    for(let i=0; i < 5; i++){
         
         myPassword.push(myPass[parseInt(Math.random()*(myPass.length))]);
     };
+    myPassword.splice(myPass[parseInt(Math.random()*(myPass.length))], 1, capitalLetters[parseInt(Math.random()*(capitalLetters.length))],smallLetters[parseInt(Math.random()*(smallLetters.length))], numbers[parseInt(Math.random()*(numbers.length))], specialCharacters[parseInt(Math.random()*(specialCharacters.length))]);
     return myPassword.join("");
 };
 
