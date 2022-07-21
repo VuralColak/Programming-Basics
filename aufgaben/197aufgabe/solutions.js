@@ -64,12 +64,33 @@ console.log("    ");
 console.log("---------Aufgabe-3-------");
 console.log("    ");
 
-const aufgabe3 = (str5) => str5.split(" ");
-const reverseText = [];
+// // const aufgabe3 = (str5) => str5.split(" ");
+// const aufgabe3 = text1.split(" ");
+// console.log(aufgabe3);
+// const aufgabe3Word = aufgabe3[2].split("").join("");
+// console.log(aufgabe3Word);
+// const reverseText = [];
 
-for(let i=0; i<aufgabe3(str5).split(" ").length; i++){
-    reverseText.push(aufgabe3(str5)[i].reverse());
+// for(let i=0; i<text1.length; i++){
+//     var x = aufgabe3.split(" ");
+//     reverseText.push(x);
+// };
+
+
+// function aufgabe3(str5) {
+//     let reverseWordArr = str5.split(" ").map(word => word.split("").reverse().join(""));
+//     return reverseWordArr.join(" ");
+//   };
+
+function aufgabe3(str5) {
+    return str5.split("").reverse().join("").split(" ").reverse().join(" ");
+    
 };
 
+
 console.log(aufgabe3(text1));
-console.log({reverseText});
+console.log("    ");
+console.log(aufgabe3(text2));
+console.log("    ");
+console.log(aufgabe3(text3));
+// console.log({reverseText});
