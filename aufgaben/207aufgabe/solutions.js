@@ -194,13 +194,12 @@ function symmetricDifference(arrAufgabe3a, arrAufgabe3b) {
         return a - b;
     });
     const newArrayAufgabe3b = [];
-    const newArrayAufgabe3c = [];
-    let newArrayAufgabe3d = newArrayAufgabe3a.filter((c, index) => {
+    let newArrayAufgabe3c = newArrayAufgabe3a.filter((c, index) => {
         return newArrayAufgabe3a.indexOf(c) !== index;
     });
 
     for (let i = 0; i < newArrayAufgabe3a.length; i++) {
-        if (!newArrayAufgabe3d.includes(newArrayAufgabe3a[i])) {
+        if (!newArrayAufgabe3c.includes(newArrayAufgabe3a[i])) {
             newArrayAufgabe3b.push(newArrayAufgabe3a[i]);
         };
     };
