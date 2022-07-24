@@ -121,3 +121,95 @@ function createPassword(myPass){
 
 console.log(createPassword(allCharacters));
 // console.log(createPassword(smallLetters));
+
+
+
+
+////////////////////////////////////
+console.log("     ");
+console.log("----------Aufgabe-3----------");
+console.log("     ");
+
+
+
+
+/*Aufgabe 3 (Symmetrischer Unterschied)
+Implementiere eine Funktion mit dem namen symmetricDifference(), die zwei Arrays als Parameter erhält und ein Array mit deren symmetrischer Differenz zurückgibt. Das zurückgegebene Array darf nur eindeutige Werte enthalten (keine Duplikate).
+Beispiel:
+symmetricDifference([1, 2], [ ]) sollte [1, 2] zurückgeben
+symmetricDifference([1, 2], [1]) sollte [2] zurückgeben
+symmetricDifference([1, 2], [1, 3]) sollte [2, 3] zurückgeben
+symmetricDifference([1, 2, 3], [5, 2, 1, 4]) sollte [3, 4, 5] zurückgeben
+symmetricDifference([1, 2, 3, 3], [5, 2, 1, 4]) sollte [3, 4, 5] zurückgeben
+symmetricDifference([1, 2, 3], [5, 2, 1, 4, 5]) sollte [3, 4, 5] zurückgeben*/
+
+
+
+// function symmetricDifference(arrAufgabe3a, arrAufgabe3b) {
+//     const longArrayLength = (arrAufgabe3a.length > arrAufgabe3b.length) ? arrAufgabe3a : arrAufgabe3b;
+//     const shortArrayLength = (arrAufgabe3a.length <= arrAufgabe3b.length) ? arrAufgabe3a : arrAufgabe3b;
+//     const newArrAufgabe3a = [];
+//     const newArrAufgabe3b = [];
+//     for (let i = 0; i < longArrayLength.length; i++) {
+//         if (shortArrayLength.includes(longArrayLength[i])) {
+//             newArrAufgabe3b.push(longArrayLength[i]);
+//         }else {
+//             newArrAufgabe3a.push(longArrayLength[i]);
+//         };
+//     };
+//     return newArrAufgabe3a;
+// };
+
+
+// function symmetricDifference(arrAufgabe3a, arrAufgabe3b) {
+//     const newArrayAufgabe3a = arrAufgabe3a.concat(arrAufgabe3b);
+//     const newArrayAufgabe3b = arrAufgabe3a.concat(arrAufgabe3b);
+//     const newArrayAufgabe3c = [];
+//     const newArrayAufgabe3d = [];
+//     const newArrayAufgabe3e = [];
+//     for (let i = 0; i < newArrayAufgabe3a.length; i++) {
+//         if (newArrayAufgabe3b.includes(newArrayAufgabe3a[i])) {
+//             newArrayAufgabe3c.push(newArrayAufgabe3a[i]);
+//             newArrayAufgabe3b.shift();
+//         } else if (newArrayAufgabe3c.includes(newArrayAufgabe3a[i]) && newArrayAufgabe3b.includes(newArrayAufgabe3a[i])) {
+//             newArrayAufgabe3d.push(newArrayAufgabe3a[i]);
+//         } else {
+//             newArrayAufgabe3e.push(newArrayAufgabe3a[i]);
+//         };
+//     };
+//     return newArrayAufgabe3e;
+// };
+
+
+
+
+function symmetricDifference(arrAufgabe3a, arrAufgabe3b) {
+    let uniqueChars3a = arrAufgabe3a.filter((c, index) => {
+        return arrAufgabe3a.indexOf(c) === index;
+    });
+    let uniqueChars3b = arrAufgabe3b.filter((c, index) => {
+        return arrAufgabe3b.indexOf(c) === index;
+    }); 
+    const newArrayAufgabe3a = (uniqueChars3a.concat(uniqueChars3b)).sort(function(a, b) {
+        return a - b;
+    });
+    const newArrayAufgabe3b = [];
+    const newArrayAufgabe3c = [];
+    let newArrayAufgabe3d = newArrayAufgabe3a.filter((c, index) => {
+        return newArrayAufgabe3a.indexOf(c) !== index;
+    });
+
+    for (let i = 0; i < newArrayAufgabe3a.length; i++) {
+        if (!newArrayAufgabe3d.includes(newArrayAufgabe3a[i])) {
+            newArrayAufgabe3b.push(newArrayAufgabe3a[i]);
+        };
+    };
+    return newArrayAufgabe3b;
+};
+
+console.log(symmetricDifference([1, 2], [ ]));
+console.log(symmetricDifference([1, 2], [1]));
+console.log(symmetricDifference([1, 2], [1, 3]));
+console.log(symmetricDifference([1, 2, 3], [5, 2, 1, 4]));
+console.log(symmetricDifference([1, 2, 3, 3], [5, 2, 1, 4]));
+console.log(symmetricDifference([1, 2, 3], [5, 2, 1, 4, 5]));
