@@ -20,10 +20,13 @@ console.log('    ');
 const student = {
     firstName: "John",
     lastName: "Smith",
-    class: 12 
+    class: 12,
+    info: function() {
+        return `${this.firstName} ${this.lastName} is a student in class ${this.class}`;
+    }
 };
 
-console.log(`${student.firstName} ${student.lastName} is a student in class ${student.class}`);
+console.log(student.info());
 
 
 console.log('    ');
@@ -31,16 +34,24 @@ console.log('-------------');
 console.log('    ');
 
 
-const personA = {
+const person = {
     vorname: 'John',
     nachname: 'Smith',
     alter: '41',
     beruf: 'engineer',
     stadt: 'Paris',
-    land: 'France'
+    land: 'France',
+    printInfo: function() {
+        return `${this.vorname} ${this.nachname} is a ${this.alter} year old ${this.beruf} living in ${this.stadt}/${this.land}.`
+    },
+    getObjectLength: function() {
+        return Object.keys(this).length;
+    }
 };
 
-console.log(`${personA.vorname} ${personA.nachname} is a ${personA.alter} year old ${personA.beruf} living in ${personA.stadt}/${personA.land}.`);
+console.log(person.printInfo());
+console.log('    ');
+console.log(person.getObjectLength());
 console.log('    ');
 
 
@@ -68,7 +79,32 @@ console.log('    ');
 
 // Schwer: Überlege selbst wie du die Methoden implementieren kannst.
 
-const MyMath = {
+const MyMath1 = {
+    ceil: function(num){
+    console.log(Math.ceil(num))
+    },
+    floor: function(num){
+        console.log(Math.floor(num));
+    },
+    pow: function(num1, num2){
+        console.log(Math.pow(num1, num2));
+    },
+    sqrt: function(num){
+        console.log(Math.sqrt(num));
+    },
+    abs: function(num){
+        console.log(Math.abs(num));
+    },
+};
+
+
+
+
+
+
+
+
+const MyMath2 = {
     ceil: function(number) {
         console.log(parseInt(number) +1);
     },
@@ -76,9 +112,12 @@ const MyMath = {
         console.log(parseInt(number));
     },
     pow: function(number, number2) {
-        for (let i = 0; i < array.length; i++) {
-            const element = array[i];
-            
+        let pow2 = number;
+        for (let i = 1; i < number2; i++) {
+            pow2 *= number
         };
+        return pow2;
     },
-}
+};
+
+console.log(MyMath2.pow(3, 3));
