@@ -184,40 +184,24 @@ console.log(' ');
 
 const arrBonus5 = { a: 1, b: 2, c: 3 };
 
-// function keysAndValuesArr(q) {
-//     const objectWithArr = {};
-//     for (const value in q){
-//         objectWithArr[value] = q[value]
-//     }
-//     return Object.entries(objectWithArr)
-// }
+let person5 = {
+    name: "John", 
+    job: "teacher"
+}
 
-// console.log(keysAndValuesArr(myObjt));
+let student5 = {
+    name: "Mike", 
+    class: "4A", 
+    course: "English"
+}
 
+function bonus5(q) {
+    var newArrKeysBonus5 = Object.values(q);
+    var newArrValuesBonus5 = Object.keys(q);
+    var newArrBonus5 = [newArrValuesBonus5, newArrKeysBonus5];
+    return newArrBonus5;
+};
 
-// function bonus5(q) {
-
-//     const newArrBonus5 = [];
-//     for (let i = 0; i < q.length; i++) {
-//         newArrBonus5.push(Object.keys(q)[i])
-//     }
-
-//     return newArrBonus5;
-    
-// };
-
-// console.log(bonus5(arrBonus5));
-
-// console.log(`${Object.keys(q)}, ${Object.values(q)}`);
-
-var newArrKeysBonus5 = Object.keys(arrBonus5)
-    .map(function(key) {
-        return arrBonus5[key];
-    });
-
-var newArrValuesBonus5 = Object.values(arrBonus5)
-    .map(function(key) {
-        return arrBonus5[key];
-    });
-
-console.log(newArrValuesBonus5, newArrKeysBonus5); // ["hello", "this is", "javascript!"]
+console.log(bonus5(arrBonus5));
+console.log(bonus5(person5));
+console.log(bonus5(student5));
