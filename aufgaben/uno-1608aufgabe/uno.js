@@ -118,6 +118,22 @@ const gameStack = shuffledStack.shift();
 console.log({ gameStack, shuffledStack });
 // Bitte hilf mir!
 
+
+for(let i=0; i<player1.hand.length; i++){
+    if (player1.hand.length > 0 && player1.hand[i].color === gameStack.color || player1.hand[i].number === gameStack.number){
+    player1.hand.splice(player1.hand[i],1)
+    gameStack = player1.hand[i];
+    }
+    
+}
+    
+//console.log(player1.hand);
+    
+console.log("-------------");
+console.log({gameStack});
+console.log(player1.hand);
+
+
 // 1. Spieler anlegen
 // Es sollen zwei unterschiedliche Spieler angelegt werden können.
 // Dafür soll aber unbedingt die Vorlage verwendet werden.
