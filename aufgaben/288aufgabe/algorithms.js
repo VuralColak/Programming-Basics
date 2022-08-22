@@ -8,8 +8,11 @@
 // - Bonus: Gibt es Unterschiede, wenn bestimmte Argumente übergeben werden?
 
 function functionA(array) {
+    let counter = 0;
     for (let i = 0; i < array.length; i++) {
+        counter++;
         for (let j = 0; j < array.length - 1 - i; j++) {
+            counter++;
             const currentElement = array[j];
             // Variable a ist immer erste Werte.
             // Variable b ist immer zweite Werte.
@@ -23,6 +26,7 @@ function functionA(array) {
             }
         }
     }
+    console.log(counter);
     return array;
 }
 
@@ -32,10 +36,13 @@ console.log(functionA([3, 6, 8, 1]));
 
 
 function functionB(array) {
+    let counter = 0;
     let x;
     for (let i = 0; i < array.length - 1; i++) {
+        counter++;
         x = i;
         for (let j = i; j < array.length; j++) {
+            counter++;
             if (array[x] > array[j]) {
                 x = j;
             }
@@ -47,29 +54,38 @@ function functionB(array) {
             array[x] = a;
         }
     }
+    console.log(counter);
     return array;
 }
+
+console.log(functionB([3, 6, 8, 1]));
 
 // Diese Funktion gibt uns die aufsteigen sortierten Werte.
 
 
 function functionC(array) {
+    let counter = 0;
     let x;
     for (let i = 1; i < array.length; i++) {
+        counter++;
         let j = i;
         x = array[i];
         while (j > 0 && array[j - 1] < x) {
+            counter++;
             array[j] = array[j - 1];
             j--;
         }
         array[j] = x;
     }
+    console.log(counter);
     return array;
 }
+
+console.log(functionC([3, 6, 8, 1]));
 
 // Diese Funktion gibt uns die absteigen sortierten Werte.
 
 
-const arr = [2, 6, 1, 5, 3, 9];
+// const arr = [2, 6, 1, 5, 3, 9];
 
-console.log(arr.sort((a, b) => a-b));
+// console.log(arr.sort((a, b) => a-b));
