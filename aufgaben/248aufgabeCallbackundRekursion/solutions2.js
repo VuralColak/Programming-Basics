@@ -119,7 +119,26 @@ console.log(' ');
 // -   Die Preise sind ganze Zahlen.
 
 
-function
+
+function maxItems(price, money) {
+    const sortedPrice = price.sort((a, b) => a - b)        
+    const myArray = []
+    for(let i = 0; i < sortedPrice.length; i++){
+        money = money - sortedPrice[i]
+        if(money > 0){
+            myArray.push(sortedPrice[i])
+        } 
+    }
+    if(myArray.length === 0) {
+        return "Nicht genug Geld!"
+    }; return myArray.length
+}
+
+console.log(maxItems(["10", "7", "2", "60"], "20"));
+console.log(maxItems(["1", "1", "2"], "3"));
+console.log(maxItems(["15", "5", "30", "30", "10"]));
+
+
 
 
 
