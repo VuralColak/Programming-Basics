@@ -73,6 +73,6 @@ const google = outerfunction2("Google");
 const duckDuckGo = outerfunction2("DuckDuckGo");
 const bing = outerfunction2("Bing");
 
-google("closure");
-duckDuckGo("closure");
-bing("closure");
+google("Mars");
+duckDuckGo("Erde");
+bing("Jupiter");
