@@ -119,30 +119,14 @@ console.log(' ');
 // ```
 
 
-// function reverse(str, len) {
-//     if (len == str.length) {
-//         return;
-//     }
-//     let result = []
-//     result.push(reverse(str, len + 1));
-
-//     console.log(str[len]);
-
-// }
-
-
-// const hello = "hello world";
-
-// reverse(hello, 0);
-
-
 const hello = "hello world";
+
 function reverse (str) {
-if (str === "") {
-return "";
-} else {
-return reverse(str.substr(1)) + str.charAt(0);
-}
+    if (str === "") {
+        return "";
+    } else {
+    return reverse(str.substr(1)) + str.charAt(0);
+    }
 }
 
 
