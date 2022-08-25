@@ -1,3 +1,29 @@
+console.log(' ');
+console.log('-----Class Aufgabe-2-----');
+console.log(' ');
+
+const now = new Date(); 
+const test = new Date();
+
+
+
+console.log(now===Date)
+
+
+console.log(typeof now)
+console.log(typeof Date())
+
+
+
+
+console.log(new Date() === new Date())
+
+
+
+console.log(now === new Date())
+
+console.log(new Date() === new Date())
+
 // # PB - Klassen - Grundlagen
 
 // In dieser Aufgabe geht es darum, die grundlegenden Konzepte von Klassen zu üben. Wir üben die Verwendung der Klasse `Date`, die in JavaScript eingebaut ist!
