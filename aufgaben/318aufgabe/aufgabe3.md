@@ -11,7 +11,7 @@ In den folgenden Beispielen wird das erwartete Verhalten klarer dargestellt.
 ```js
 const plusFive = makePlusFunction(5);
 plusFive(2); // returns 7
-plusFive(-8); // returns 3
+plusFive(-8); // returns -3
 
 const plusTen = makePlusFunction(10);
 plusTen(0); // returns 10
