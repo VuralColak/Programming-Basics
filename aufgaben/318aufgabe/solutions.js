@@ -123,7 +123,7 @@ console.log(' ');
 
 function makePlusFunction (Basiszahl) {
     return function SumFunction (zahl) {
-        return Math.abs(Basiszahl + zahl);
+        return Basiszahl + zahl;
     }
 };
 
