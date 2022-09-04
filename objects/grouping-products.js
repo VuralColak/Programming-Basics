@@ -460,7 +460,7 @@ for (let i = 0; i < products.length; i++) {
 // und alle Produkte sind diesen zugeordnet.
 // Wir haben also nun wieder Arrays für sämtliche Kategorien,
 // diesmal allerdings verpackt in einem Objekt.
-console.log(categories);
+console.log({categories});
 
 
 // Wir können mit Object.keys(), Object.values() und Object.entries()
@@ -471,10 +471,13 @@ console.log(categories);
 // Diese haben zwei Elemente: Key und Value.
 
 console.log("---");
+console.log("Keys: ");
 console.log(Object.keys(categories));
 console.log("---");
+console.log("Values: ");
 console.log(Object.values(categories));
 console.log("---");
+console.log("Entries: ");
 console.log(Object.entries(categories));
 console.log("---");
 
@@ -489,7 +492,7 @@ for (let i = 0; i < categoryNames.length; i++) {
     const category = categoryNames[i];
 
     console.log();
-    console.log(category);
+    console.log({category});
     console.log("----------------------");
 
     // Da die Produkte einer Kategorie in categories unter dem jeweiligen Key zu finden sind,
