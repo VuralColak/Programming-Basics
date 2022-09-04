@@ -114,3 +114,14 @@ for (let i = 0; i < randomNumbers.length; i++) {
 console.log("Zahlen unter 50:", kleiner50);
 // // - Liste >=50 ausgeben
 console.log("Zahlen größer oder gleich 50:", groesser50);
+
+
+
+///////////////////////////////
+
+console.log('-----');
+console.log('{Asagidakiler ayni sonucu veriyorlar. Array() = []}');
+const deneme1 = Array();
+const deneme2 = [];
+console.log({deneme1});
+console.log({deneme2});
