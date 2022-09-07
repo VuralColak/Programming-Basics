@@ -139,3 +139,5 @@ function guessingGame(amount) {
   console.log(game2(1)); // "No more guesses the answer was 0"
   console.log(game2(1)); // "You are all done playing!"
 
+
+
