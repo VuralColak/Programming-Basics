@@ -81,7 +81,7 @@ function bankAccountFactory() {
         console.log(`Der Kontostand ist ${balance}`);
     }
 
-    // Die bankAccountFactory returned jetzt drei closures
+// Die bankAccountFactory returned jetzt drei closures
     return {
         depositMoney,
         withdrawMoney,
@@ -97,13 +97,46 @@ const leosBankAccount = bankAccountFactory();
 leosBankAccount.printAccountStatement();
 leosBankAccount.depositMoney(1000);
 leosBankAccount.printAccountStatement();
+
 // Kann leo selbst sein Guthaben verändern?
 leosBankAccount.balance = 999999; // Das ist wie Geld auf dem Bankautomat liegen lassen. Es wurde nicht eingezahlt
+
 leosBankAccount.printAccountStatement(); // Nein
+
 // Kann jemand leos guthaben klauen?
 const geldTascheVonDieb2 = leosBankAccount.balance;
 leosBankAccount.balance = 0;
 leosBankAccount.printAccountStatement();
 console.log({geldTascheVonDieb2}); // Geld das auf dem Bankautomat lag
+
 leosBankAccount.withdrawMoney(350);
 leosBankAccount.printAccountStatement();
+
+console.log(' ');
+console.log('-----Deneme------');
+console.log(' ');
+
+function deneme() {
+    let denemeBalance = 0;
+    function denemeDepositMoney(amount) {
+        denemeBalance += amount;
+    }
+    function denemeWithdrawMoney(amount) {
+        denemeBalance -= amount;
+    }
+    function denemePrintAccountStatement() {
+        console.log(`Der Kontostand ist ${denemeBalance}`);
+    }
+
+// Die bankAccountFactory returned jetzt drei closures
+    return {
+        denemeDepositMoney,
+        denemeWithdrawMoney,
+        denemePrintAccountStatement,
+    };
+}
+
+const vuralsBankAccount = deneme();
+vuralsBankAccount.balance = 99999;
+
+console.log(vuralsBankAccount);
