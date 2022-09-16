@@ -196,3 +196,22 @@ console.log({count}); // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
 
 // devami bu sitede; https://www.freecodecamp.org/news/reduce-f47a7da511a9/
 
+
+console.log('-----------');
+const mat = [10, 20, 30, 40, 50, 100];
+console.log('liste = ', mat);
+
+function islem(sayi1, sayi2) {
+  return sayi1 + sayi2;
+};
+
+const ilkDeger = 0;
+
+const sonuc = mat.reduce(islem, ilkDeger);
+
+console.log({sonuc});
+
+
+// reduce methodu icin Türkce kaynak; 'Javascript reduce Fonksiyonu' Link; https://ibrahim-kurce.medium.com/javascript-reduce-fonksiyonu-da5e09ba2e44
+
+// NOT; reduceRight Methodu, reduce ile ayni. Tek farki; sagdan sola dogru islem yapiyor.
