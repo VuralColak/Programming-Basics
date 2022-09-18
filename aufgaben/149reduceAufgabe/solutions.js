@@ -62,6 +62,35 @@ function duplikate(str) {
 };
 
 
+console.log(' ');
+console.log('---Ella`s Aufgabe Lösung-2---');
+console.log(' ');
+
+function duplikate(str) {
+  const arrayFromString = str.toLowerCase().split("").sort();
+  const newArray = [];
+  arrayFromString.forEach((element) => {
+      if (
+          arrayFromString.indexOf(element) !==
+          arrayFromString.lastIndexOf(element)
+      ) {
+          newArray.push(element);
+      }
+  });
+
+  if (newArray.length === 0) return "0";
+  const filteredArray = [];
+  for (let i = 0; i < newArray.length; i++) {
+      if (newArray[i + 1] !== newArray[i]) {
+          filteredArray.push(newArray[i]);
+      }
+  }
+
+  return `${filteredArray.length}: ${filteredArray.join(", ")}`;
+}
+
+
+
 console.log(duplikate("abcde"));
 console.log(duplikate("aabbcde"));
 console.log(duplikate("aabBcde"));
@@ -74,3 +103,34 @@ console.log(duplikate("aabbb"));
 console.log(' ');
 console.log('---Yarooub`s Aufgabe---');
 console.log(' ');
+
+
+function doAllObjectsInArrayHaveKeyValuePair(arr, key, value) {
+  return arr.every((element) => element[key] === value);
+}
+
+function doAllObjectsInArrayHaveKeyValuePair2(arr, key, value) {
+  const getCertain = (obj) => {
+      return obj[key] === value;
+  };
+  return arr.reduce((prev, curr) => {
+      return (prev = prev && getCertain(curr));
+  }, true);
+}
+
+function doAllObjectsInArrayHaveKeyValuePair3(arr, key, value) {
+  for (const obj of arr) {
+      if (obj[key] != value) return false;
+  }
+  return true;
+}
+
+let arr = [
+  { title: "Instructor", first: "Elie", last: "Schoppik" },
+  { title: "Instructor", first: "Tim", last: "Garcia", isCatOwner: true },
+  { title: "Instructor", first: "Matt", last: "Lane" },
+  { title: "Instructor", first: "Colt", last: "Steele", isCatOwner: true },
+];
+
+console.log(doAllObjectsInArrayHaveKeyValuePair3(arr, "title", "Instructor")); // true
+console.log(doAllObjectsInArrayHaveKeyValuePair3(arr, "first", "Elie")); // false
